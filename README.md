@@ -1,3 +1,3 @@
-# Teste Laravel 01
+# Teste Laravel 02
 
 Esse repositório é um teste feito para uma empresa.
