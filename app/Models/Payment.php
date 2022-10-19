@@ -10,6 +10,7 @@ class Payment extends Model{
         'id',
         'subtotal',
         'quota',
+        'method',
     ];
 
     public function tables(){

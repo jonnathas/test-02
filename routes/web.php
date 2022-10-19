@@ -22,7 +22,9 @@ Route::post('/table/{table}/product/{product}', [App\Http\Controllers\TableContr
 
 Route::get('/product', [App\Http\Controllers\ProductController::class, 'index'])->name('product.index');
 Route::get('/product/{product}/edit', [App\Http\Controllers\ProductController::class, 'edit'])->name('product.edit');
-
 Route::put('/product/{product}', [App\Http\Controllers\ProductController::class, 'update'])->name('product.update');
+
+Route::get('report',[App\Http\Controllers\ReportController::class,'index'])->name('report.index');
+Route::get('report/table/{table}',[App\Http\Controllers\ReportController::class,'show'])->name('report.show');
 
 

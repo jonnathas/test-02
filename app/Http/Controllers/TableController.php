@@ -40,7 +40,6 @@ class TableController extends BaseController
             
         }
             
-        
         return view('table.index', [ 
             'tables' => $tables,
             'products' => $products,
@@ -142,8 +141,10 @@ class TableController extends BaseController
 
             foreach($methods as $method){
 
+                
+
                 $table->payments()->create([
-                    'type' => $method,
+                    'method' => $method,
                     'quota' => $quota
                 ]);
             }

@@ -35,7 +35,7 @@
                         </form>
                     @endforeach
 
-                    <a href="{{ route('table.show',[$table_id]) }}" class="btn btn-warning form-control mb-2">Fechar</a>
+                    <a href="{{ route('table.show',[$table_id]) }}" class="btn btn-warning form-control mb-2">Visualizar</a>
     
                 @else
                     

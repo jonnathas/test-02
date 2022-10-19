@@ -45,8 +45,28 @@
                     <option value="pix">Pix</option>
                 </select>
                 
-                <input type="submit" value="Fechar" class="btn btn-success form-control"/>
+                <input type="submit" value="Fechar" class="btn btn-warning form-control"/>
             </form>
         </div>
+        <table class="table">
+            <thead>
+                <tr> 
+                    <th scope="col">Nome</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Adicionado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($table->products as $product)
+                <tr>
+                    <td>{{$product->name}}</td>
+                    <td>{{$product->price}}</td>
+                    <td>{{dateTimeFormate($product->created_at)}}</td>
+                </tr>
+                @empty
+                
+                @endforelse
+            </tbody>
+        </table>
     </div>
 @endsection
